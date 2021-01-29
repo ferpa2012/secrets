@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://ferpa:3317nhy6Ferpa@cluster0.otvw1.mongodb.net/userDB?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
